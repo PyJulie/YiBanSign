@@ -1,4 +1,3 @@
-// 我要签到
     $('#btnNew').click(function () {
         var geox = parseFloat($.getUrlParam("GeoX")), geoy = parseFloat($.getUrlParam("GeoY"));
         var fSign = function (point) {
@@ -9,7 +8,6 @@
             xqpos = new BMap.Point(xq.GeoCenterLng, xq.GeoCenterLat);
             var dis = map.getDistance(xqpos, point);
             if (dis <= xq.GeoRadius) {
-                //var s = GlbVar.StudentId + "," + GlbVar.PlanId + "," + point.lng + "," + point.lat;
                 var dt = new Date(GlbVar.StartTime);
                 var startTime = isNaN(dt) ? '' : '' + dt.getFullYear() + '/' + (dt.getMonth() + 1) + '/' + dt.getDate() + ' ' + dt.getHours() + ':' + dt.getMinutes();
                 dt = new Date(GlbVar.EndTime);
